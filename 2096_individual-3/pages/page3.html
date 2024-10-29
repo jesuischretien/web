@@ -1,0 +1,100 @@
+<!DOCTYPE html> <!-- Déclare que c'est un document HTML5 -->
+<html lang="fr"> <!-- Balise racine du document, langue définie sur français -->
+<head> <!-- Début de la section d'en-tête du document -->
+    <meta charset="UTF-8"> <!-- Définit l'encodage des caractères comme UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configure la vue pour les appareils mobiles -->
+    <title>TXT1</title> <!-- Définit le titre de la page qui apparaît dans l'onglet du navigateur -->
+    <style> /* Début de la section de style CSS intégré */
+        body { /* Style de base pour le corps du document */
+            font-family: Arial, sans-serif; /* Définit la police de caractères */
+            margin: 0; /* Supprime les marges par défaut du corps */
+            padding: 0; /* Supprime le remplissage par défaut du corps */
+            line-height: 1.6; /* Définit l'espacement entre les lignes */
+        }
+        .full-page-text { /* Style pour la section de texte en pleine page */
+            min-height: 100vh; /* Définit une hauteur minimale de 100% de la hauteur de la fenêtre */
+            padding: 20px; /* Ajoute un remplissage intérieur de 20 pixels */
+            background-color: #f0f0f0; /* Définit la couleur d'arrière-plan en gris clair */
+            display: flex; /* Utilise Flexbox pour le positionnement interne */
+            align-items: center; /* Centre verticalement le contenu */
+            justify-content: center; /* Centre horizontalement le contenu */
+        }
+        .media-section { /* Style pour la section des médias */
+            padding: 20px; /* Ajoute un remplissage intérieur de 20 pixels */
+            background-color: #ffffff; /* Définit la couleur d'arrière-plan en blanc */
+        }
+        .media-grid { /* Style pour la grille des médias */
+            display: grid; /* Utilise CSS Grid pour organiser les éléments */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Crée des colonnes adaptatives dans la grille */
+            gap: 20px; /* Définit un espace de 20 pixels entre les éléments de la grille */
+        }
+        img, video { /* Style commun pour les images et vidéos */
+            max-width: 100%; /* Assure que les images et vidéos ne dépassent pas la largeur de leur conteneur */
+            height: auto; /* Maintient le ratio d'aspect des images et vidéos */
+        }
+    </style> <!-- Fin de la section de style CSS intégré -->
+</head>
+<body> <!-- Début du corps du document -->
+
+    <!-- Section pour le texte en pleine page -->
+    <section class="full-page-text"> <!-- Section pour le texte en pleine page -->
+        <div> <!-- Conteneur pour le contenu textuel -->
+            <h1>Bienvenue sur ma page</h1> <!-- Titre principal de la section -->
+            <p> <!-- Début d'un paragraphe -->
+            Ceci est un exemple de texte qui s'affiche en pleine page.<br> <!-- Texte explicatif avec un saut de ligne -->
+             Vous pouvez ajouter autant de contenu que vous le souhaitez ici. <!-- Texte supplémentaire dans le même paragraphe -->
+            </p> <!-- Fin du paragraphe -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p> <!-- Autre paragraphe avec du texte exemple -->
+        </div> <!-- Fin du conteneur textuel -->
+    </section> <!-- Fin de la section texte en pleine page -->
+
+
+    <!-- Section principale pour afficher différents types de médias -->
+    <section class="media-section"> <!-- Section principale pour afficher différents types de médias -->
+        <!-- Section pour les photos -->
+        <h2>Galerie Photos</h2> <!-- Sous-titre pour la galerie de photos -->
+        <div class="photo-grid"> <!-- Conteneur pour la grille des photos -->
+            <img src="https://via.placeholder.com/300x200" alt="Photo 1"> <!-- Première image avec une source et un texte alternatif -->
+            <img src="https://via.placeholder.com/300x200" alt="Photo 2"> <!-- Deuxième image avec une source et un texte alternatif -->
+            <img src="https://via.placeholder.com/300x200" alt="Photo 3"> <!-- Troisième image avec une source et un texte alternatif -->
+        </div> <!-- Fin du conteneur grille des photos -->
+    
+        <!-- Section pour les vidéos YouTube -->
+        <h2>Vidéos YouTube</h2> <!-- Sous-titre pour la section des vidéos YouTube -->
+        <div class="video-grid"> <!-- Conteneur pour la grille des vidéos YouTube -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe> <!-- Premier iframe pour une vidéo YouTube -->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe> <!-- Deuxième iframe pour une vidéo YouTube -->
+        </div> <!-- Fin du conteneur grille des vidéos YouTube -->
+    
+        <!-- Section pour les vidéos Rumble -->
+        <h2>Vidéos Rumble</h2> <!-- Sous-titre pour la section des vidéos Rumble -->
+        <div class="video-grid"> <!-- Conteneur pour la grille des vidéos Rumble -->
+            <iframe class="rumble" width="640" height="360" src="https://rumble.com/embed/VIDEO_ID_1/" frameborder="0" allowfullscreen></iframe> <!-- Premier iframe pour une vidéo Rumble -->
+            <iframe class="rumble" width="640" height="360" src="https://rumble.com/embed/VIDEO_ID_2/" frameborder="0" allowfullscreen></iframe> <!-- Deuxième iframe pour une vidéo Rumble -->
+        </div> <!-- Fin du conteneur grille des vidéos Rumble -->
+    
+        <!-- Section pour les vidéos Odysee -->
+        <h2>Vidéos Odysee</h2> <!-- Sous-titre pour la section des vidéos Odysee -->
+        <div class="video-grid"> <!-- Conteneur pour la grille des vidéos Odysee -->
+            <iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/VIDEO_ID_1" allowfullscreen></iframe> <!-- Premier iframe pour une vidéo Odysee -->
+            <iframe id="odysee-iframe" width="560" height="315" src="https://odysee.com/$/embed/VIDEO_ID_2" allowfullscreen></iframe> <!-- Deuxième iframe pour une vidéo Odysee -->
+        </div> <!-- Fin du conteneur grille des vidéos Odysee -->
+    
+        <!-- Section pour les vidéos locales -->
+        <h2>Vidéos Locales</h2> <!-- Sous-titre pour la section des vidéos locales -->
+        <div class="video-grid"> <!-- Conteneur pour la grille des vidéos locales -->
+            <video controls width="560" height="315"> <!-- Première vidéo locale avec contrôles de lecture -->
+                <source src="downloads/" type="video/mp4"> <!-- Source de la première vidéo locale avec type spécifié -->
+                Votre navigateur ne supporte pas la balise vidéo. <!-- Message affiché si le navigateur ne supporte pas les vidéos HTML5 -->
+            </video> <!-- Fin de la première balise vidéo locale -->
+            <video controls width="560" height="315"> <!-- Deuxième vidéo locale avec contrôles de lecture -->
+                <source src="chemin/vers/video2.mp4" type="video/mp4"> <!-- Source de la deuxième vidéo locale avec type spécifié -->
+                Votre navigateur ne supporte pas la balise vidéo. <!-- Message affiché si le navigateur ne supporte pas les vidéos HTML5 -->
+            </video> <!-- Fin de la deuxième balise vidéo locale -->
+        </div> <!-- Fin du conteneur grille des vidéos locales -->
+    </section> <!-- Fin de la section principale pour afficher différents types de médias -->
+    
+
+
+</body>
+</html>

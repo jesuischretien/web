@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Page Simple</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .full-page-text {
+            min-height: 100vh;
+            padding: 20px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .media-section {
+            padding: 20px;
+            background-color: #ffffff;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        img, video {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <section class="full-page-text">
+        <div>
+            <h1>Bienvenue sur ma page</h1>
+            <p>Ceci est un exemple de texte qui s'affiche en pleine page. Vous pouvez ajouter autant de contenu que vous le souhaitez ici.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui mauris. Vivamus hendrerit arcu sed erat molestie vehicula.</p>
+        </div>
+    </section>
+
+    <section class="media-section">
+        <h2>Galerie de médias</h2>
+        <div class="media-grid">
+            <img src="https://via.placeholder.com/300x200" alt="Image 1">
+            <img src="https://via.placeholder.com/300x200" alt="Image 2">
+            <video controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la balise vidéo.
+            </video>
+            <img src="https://via.placeholder.com/300x200" alt="Image 3">
+        </div>
+    </section>
+</body>
+</html>
