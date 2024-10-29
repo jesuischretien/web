@@ -1,2 +1,2 @@
 # web
-jeuischretien/web est un site internet a destination de ceux qui veulent savoir ce qu'est un Chretien
+jeuischretien/web est un site internet static a destination de ceux qui veulent savoir ce qu'est un Chretien
